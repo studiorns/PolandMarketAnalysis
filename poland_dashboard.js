@@ -15,12 +15,14 @@ const polandData = {
         }
     },
     flightSearches: {
-        '2023': [2959, 2033, 2374, 1429, 855, 1223, 1300, 1619, 2377, 2618, 2892, 2842],
-        '2024': [3572, 2943, 2104, 1427, 1622, 1231, 2170, 2100, 2748, 2932, 2556, 3203]
+        '2023': [45021, 37271, 38154, 28210, 20989, 18095, 22059, 26253, 34199, 40640, 48108, 40973],
+        '2024': [52889, 36633, 31721, 22253, 19711, 14450, 23230, 29111, 39079, 43980, 45171, 47005],
+        '2025': [55741, 35951, 26012, 19196, 24577, 20912, 23018, null, null, null, null, null]
     },
     hotelGuests: {
         '2023': [1166, 497, 1141, 1018, 1134, 959, 821, 1333, 1414, 1435, 1253, 1609],
-        '2024': [2631, 1919, 3213, 2413, 3807, 3145, 3353, 4724, 4685, 4209, 2715, 2366]
+        '2024': [2631, 1919, 3213, 2413, 3807, 3145, 3353, 4724, 4685, 4209, 2715, 2366],
+        '2025': [2146, 3711, 2481, 2976, 3167, 2079, null, null, null, null, null, null]
     }
 };
 
@@ -309,6 +311,14 @@ function initCharts() {
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
                     borderWidth: 2,
                     fill: false
+                },
+                {
+                    label: '2025',
+                    data: polandData.flightSearches['2025'],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                    borderWidth: 2,
+                    fill: false
                 }
             ]
         },
@@ -380,6 +390,14 @@ function initCharts() {
                     data: polandData.hotelGuests['2024'],
                     borderColor: 'rgba(255, 159, 64, 1)',
                     backgroundColor: 'rgba(255, 159, 64, 0.1)',
+                    borderWidth: 2,
+                    fill: false
+                },
+                {
+                    label: '2025',
+                    data: polandData.hotelGuests['2025'],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
                     borderWidth: 2,
                     fill: false
                 }
